@@ -1,14 +1,14 @@
-import express from 'express';
-import routes from '../routes.js';
+import express from "express";
+import routes from "../routes.js";
 import {
-    getUpload,
-    postUpload,
-    videoDetail,
-    getEditVideo,
-    postEditVideo,
-    deleteVideo
-  } from "../controllers/videoController";
-import {uploadVideo} from '../middlewares.js';
+  getUpload,
+  postUpload,
+  videoDetail,
+  getEditVideo,
+  postEditVideo,
+  deleteVideo,
+} from "../controllers/videoController";
+import { uploadVideo } from "../middlewares.js";
 
 const videoRouter = express.Router();
 
