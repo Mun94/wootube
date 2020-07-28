@@ -1,0 +1,9 @@
+.videoBlock {
+  display: flex;
+  a {
+    video {
+      width: 20%;
+      height: auto;
+    }
+  }
+}
