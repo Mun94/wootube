@@ -47,13 +47,15 @@
 body {
   background-color: #f0ffe6;
   font-size: 1rem;
-  margin: 0; }
+  margin: 0;
+  height: 96%; }
 
 main {
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 96%; }
 
 html {
-  height: 100%; }
+  height: 96%; }
 
 .videoBlock {
   display: flex; }
@@ -75,4 +77,40 @@ footer {
   right: 0;
   text-align: center;
   color: rgba(0, 0, 0, 0.5); }
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%; }
+  .form-container form {
+    display: flex;
+    flex-direction: column; }
+    .form-container form input + input {
+      margin-top: 1rem; }
+
+.form-container > form > input:last-child {
+  margin: 1rem auto; }
+
+.form-container > form > input {
+  width: 15rem;
+  height: 1.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer; }
+
+.social-login {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .social-login button + button {
+    margin-left: 1.5rem; }
+
+.social-login > button {
+  border: none;
+  cursor: pointer;
+  width: 6.7rem;
+  height: 1.5rem;
+  text-align: center; }
 
