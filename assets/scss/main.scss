@@ -1,9 +1,13 @@
 body {
-  background-color: gray;
+  background-color: $BG;
   font-size: 1rem;
   margin: 0;
 }
 
 main {
   margin: 0 auto;
+}
+
+html {
+  height: 100%;
 }

@@ -1,0 +1,8 @@
+.social-login {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  button + button {
+    margin-top: 1rem;
+  }
+}

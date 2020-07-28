@@ -8,7 +8,8 @@
   width: 100%;
   z-index: 1;
   top: 0px;
-  left: 0px; }
+  left: 0px;
+  box-shadow: 0.1rem 0.05rem 0 gray; }
 
 .header__wrapper .header__column:nth-child(1) i {
   font-size: 2rem;
@@ -44,16 +45,34 @@
   margin-top: 6rem; }
 
 body {
-  background-color: gray;
+  background-color: #f0ffe6;
   font-size: 1rem;
   margin: 0; }
 
 main {
   margin: 0 auto; }
 
+html {
+  height: 100%; }
+
 .videoBlock {
   display: flex; }
   .videoBlock a video {
     width: 20%;
     height: auto; }
+
+.footer:before {
+  content: "";
+  width: 20rem;
+  display: block;
+  margin: 0 auto;
+  border-top: 1.5px solid rgba(0, 0, 0, 0.5); }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5); }
 

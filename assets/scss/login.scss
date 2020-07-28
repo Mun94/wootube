@@ -1,0 +1,17 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+input {
+  display: flex;
+  flex-direction: column;
+  & + & {
+    margin-top: 1rem;
+  }
+}
+
+.form-container > form > input:last-child {
+  margin: 1rem auto;
+}
