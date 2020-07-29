@@ -8,7 +8,7 @@ block content
             h5.video__title= video.title
             a(href=routes.editVideo(video.id)) Edit video
         div
-            span.video__views= 조회수|video.views
+            span.video__views= video.views
             p.video__description= video.description
     .video__comments
         if video.comments.length === 1

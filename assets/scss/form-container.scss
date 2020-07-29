@@ -1,0 +1,53 @@
+.form-container,
+.form-container__upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  form {
+    display: flex;
+    flex-direction: column;
+    input + input {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.form-container > form > input:last-child {
+  margin: 1rem auto;
+}
+
+.form-container > form > input {
+  width: 15rem;
+  height: 1.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.form-container__upload > form > input,
+textarea {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.2rem;
+  padding: 0 0.5rem;
+}
+
+.form-container__upload > form > .file {
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.form-container__upload > form > input:not(:last-child) {
+  width: 30rem;
+  height: 2rem;
+}
+
+.form-container__upload > form > textarea {
+  min-height: 50px;
+  height: 20rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
