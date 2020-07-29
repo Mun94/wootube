@@ -1,9 +1,42 @@
 .videoBlock {
-  display: flex;
+  width: 45%;
+  margin: 1rem;
   a {
     video {
-      width: 20%;
+      width: 100%;
+      flex: 1;
+      box-sizing: border-box;
       height: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .videoBlock {
+    margin: 1rem;
+    width: 30%;
+    a {
+      video {
+        flex: 1;
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .videoBlock {
+    margin: 1rem;
+    width: 100%;
+    a {
+      video {
+        flex: 1;
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

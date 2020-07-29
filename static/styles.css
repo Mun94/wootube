@@ -58,25 +58,33 @@ html {
   height: 96%; }
 
 .videoBlock {
-  display: flex; }
+  width: 45%;
+  margin: 1rem; }
   .videoBlock a video {
-    width: 20%;
+    width: 100%;
+    flex: 1;
+    box-sizing: border-box;
     height: auto; }
 
-.footer:before {
-  content: "";
-  width: 20rem;
-  display: block;
-  margin: 0 auto;
-  border-top: 1.5px solid rgba(0, 0, 0, 0.5); }
+@media screen and (min-width: 980px) {
+  .videoBlock {
+    margin: 1rem;
+    width: 30%; }
+    .videoBlock a video {
+      flex: 1;
+      box-sizing: border-box;
+      width: 100%;
+      height: auto; } }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.5); }
+@media screen and (max-width: 720px) {
+  .videoBlock {
+    margin: 1rem;
+    width: 100%; }
+    .videoBlock a video {
+      flex: 1;
+      box-sizing: border-box;
+      width: 100%;
+      height: auto; } }
 
 .form-container {
   display: flex;
@@ -113,4 +121,54 @@ footer {
   width: 6.7rem;
   height: 1.5rem;
   text-align: center; }
+
+.videos {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+@media screen and (max-width: 720px) {
+  .videos {
+    display: flex;
+    justify-content: center; } }
+
+.footer {
+  margin: 50px 0;
+  padding-top: 50px;
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .footer .footer__icon {
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 40px;
+    margin-bottom: 20px; }
+  .footer .footer__text {
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: 800;
+    text-transform: uppercase; }
+
+.video__player {
+  display: flex;
+  justify-content: center; }
+  .video__player video {
+    width: 50%;
+    height: auto; }
+
+.video__info {
+  margin: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column; }
+  .video__info h5 {
+    margin: 0;
+    font-size: 2rem; }
+  .video__info div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .video__info div:nth-child(2) .video__views {
+    color: rgba(0, 0, 0, 0.4); }
 

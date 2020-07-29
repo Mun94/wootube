@@ -1,16 +1,19 @@
-.footer:before {
-  content: "";
-  width: 20rem;
-  display: block;
-  margin: 0 auto;
-  border-top: 1.5px solid rgba(0, 0, 0, 0.5);
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.5);
+.footer {
+  margin: 50px 0;
+  padding-top: 50px;
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .footer__icon {
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .footer__text {
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
 }
