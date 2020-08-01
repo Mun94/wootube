@@ -1,5 +1,6 @@
 .form-container,
-.form-container__upload {
+.form-container__upload,
+.form-container__editProfile {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,9 +9,25 @@
   form {
     display: flex;
     flex-direction: column;
-    input + input {
-      margin-top: 1rem;
-    }
+  }
+  input + input {
+    margin-top: 1rem;
+  }
+}
+.editProfile__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .fileUpload {
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+  input {
+    width: 15rem;
+    height: 1.5rem;
+    outline: none;
+    border: none;
   }
 }
 

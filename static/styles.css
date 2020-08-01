@@ -1,3 +1,79 @@
+.u-avatar {
+  height: 80px;
+  background-color: #b83f38;
+  border-radius: 50%; }
+
+.videoBlock {
+  width: 45%;
+  margin: 1rem; }
+  .videoBlock a video {
+    width: 100%;
+    flex: 1;
+    box-sizing: border-box;
+    height: auto; }
+
+@media screen and (min-width: 980px) {
+  .videoBlock {
+    margin: 1rem;
+    width: 30%; }
+    .videoBlock a video {
+      width: 100%;
+      height: auto; } }
+
+@media screen and (max-width: 720px) {
+  .videoBlock {
+    margin: 1rem;
+    width: 100%; }
+    .videoBlock a video {
+      width: 100%;
+      height: auto; } }
+
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.user-profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .user-profile .user-profile__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px; }
+    .user-profile .user-profile__header .profile__username {
+      font-size: 18px;
+      margin-top: 15px; }
+  .user-profile .user-profile__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .user-profile .user-profile__btns a:not(:last-child) {
+      margin-bottom: 20px; }
+
+.video__player {
+  display: flex;
+  justify-content: center; }
+  .video__player video {
+    width: 50%;
+    height: auto; }
+
+.video__info {
+  margin: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column; }
+  .video__info h5 {
+    margin: 0;
+    font-size: 2rem; }
+  .video__info div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .video__info div:nth-child(2) .video__views {
+    color: rgba(0, 0, 0, 0.4); }
+
 .header__wrapper {
   display: flex;
   justify-content: space-around;
@@ -44,6 +120,45 @@
 .line {
   margin-top: 6rem; }
 
+.social-login {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .social-login button + button {
+    margin-left: 1.5rem; }
+
+.social-login > button {
+  border: none;
+  cursor: pointer;
+  width: 6.7rem;
+  height: 1.5rem;
+  text-align: center; }
+
+.footer {
+  margin: 50px 0;
+  padding-top: 50px;
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .footer .footer__icon {
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 40px;
+    margin-bottom: 20px; }
+  .footer .footer__text {
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: 800;
+    text-transform: uppercase; }
+
+.search__header {
+  margin-left: 1rem; }
+
+.search__videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
 body {
   background-color: #f0ffe6;
   font-size: 1rem;
@@ -57,45 +172,37 @@ main {
 html {
   height: 96%; }
 
-.videoBlock {
-  width: 45%;
-  margin: 1rem; }
-  .videoBlock a video {
-    width: 100%;
-    flex: 1;
-    box-sizing: border-box;
-    height: auto; }
-
-@media screen and (min-width: 980px) {
-  .videoBlock {
-    margin: 1rem;
-    width: 30%; }
-    .videoBlock a video {
-      width: 100%;
-      height: auto; } }
-
-@media screen and (max-width: 720px) {
-  .videoBlock {
-    margin: 1rem;
-    width: 100%; }
-    .videoBlock a video {
-      width: 100%;
-      height: auto; } }
-
 .form-container,
-.form-container__upload {
+.form-container__upload,
+.form-container__editProfile {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100%; }
   .form-container form,
-  .form-container__upload form {
+  .form-container__upload form,
+  .form-container__editProfile form {
     display: flex;
     flex-direction: column; }
-    .form-container form input + input,
-    .form-container__upload form input + input {
-      margin-top: 1rem; }
+  .form-container input + input,
+  .form-container__upload input + input,
+  .form-container__editProfile input + input {
+    margin-top: 1rem; }
+
+.editProfile__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .editProfile__form .fileUpload {
+    margin-bottom: 1rem;
+    justify-content: center; }
+  .editProfile__form input {
+    width: 15rem;
+    height: 1.5rem;
+    outline: none;
+    border: none; }
 
 .form-container > form > input:last-child {
   margin: 1rem auto; }
@@ -128,69 +235,4 @@ textarea {
   height: 20rem;
   margin-top: 2rem;
   margin-bottom: 2rem; }
-
-.social-login {
-  width: 100%;
-  display: flex;
-  justify-content: center; }
-  .social-login button + button {
-    margin-left: 1.5rem; }
-
-.social-login > button {
-  border: none;
-  cursor: pointer;
-  width: 6.7rem;
-  height: 1.5rem;
-  text-align: center; }
-
-.videos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-
-.footer {
-  margin: 50px 0;
-  padding-top: 50px;
-  border-top: 3px solid rgba(0, 0, 0, 0.1);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .footer .footer__icon {
-    color: rgba(0, 0, 0, 0.2);
-    font-size: 40px;
-    margin-bottom: 20px; }
-  .footer .footer__text {
-    color: rgba(0, 0, 0, 0.2);
-    font-weight: 800;
-    text-transform: uppercase; }
-
-.video__player {
-  display: flex;
-  justify-content: center; }
-  .video__player video {
-    width: 50%;
-    height: auto; }
-
-.video__info {
-  margin: 1rem 1.5rem;
-  display: flex;
-  flex-direction: column; }
-  .video__info h5 {
-    margin: 0;
-    font-size: 2rem; }
-  .video__info div:nth-child(1) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-  .video__info div:nth-child(2) .video__views {
-    color: rgba(0, 0, 0, 0.4); }
-
-.search__header {
-  margin-left: 1rem; }
-
-.search__videos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
 

@@ -1,12 +1,17 @@
 @import "config/_variables.scss";
+@import "config/utils.scss";
+
+@import "mixins/videoBlock.scss";
+
+@import "pages/home.scss";
+@import "pages/userProfile.scss";
+@import "pages/videoDetail.scss";
+
 @import "partials/header.scss";
 @import "partials/line.scss";
-@import "main.scss";
-@import "mixins/videoBlock.scss";
-@import "form-container.scss";
 @import "partials/socialLogin.scss";
-@import "home.scss";
 @import "partials/footer.scss";
 
-@import "videoDetail.scss";
 @import "search.scss";
+@import "main.scss";
+@import "form-container.scss";
