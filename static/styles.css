@@ -318,8 +318,8 @@ input[type="submit"] {
   .videoPlayer:hover .videoPlayer__controls {
     opacity: 1; }
   .videoPlayer video {
-    width: 50%;
-    height: auto; }
+    width: 100%;
+    max-width: 100%; }
   .videoPlayer .videoPlayer__controls {
     opacity: 0;
     transition: opacity 0.4s linear;
@@ -327,7 +327,7 @@ input[type="submit"] {
     position: absolute;
     z-index: 9;
     bottom: 5px;
-    width: 50%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     display: grid;
@@ -361,12 +361,14 @@ input[type="submit"] {
 .video-detail__container {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  width: 70%;
+  margin: 0 auto; }
   .video-detail__container .video__player {
     display: flex;
     justify-content: center; }
   .video-detail__container video {
-    width: 50%;
+    width: 100%;
     height: auto; }
   .video-detail__container .video__info {
     width: 100%;

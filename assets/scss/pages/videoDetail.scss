@@ -2,12 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 70%;
+  margin: 0 auto;
   .video__player {
     display: flex;
     justify-content: center;
   }
   video {
-    width: 50%;
+    width: 100%;
     height: auto;
   }
   .video__info {

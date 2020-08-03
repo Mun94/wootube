@@ -8,8 +8,8 @@
     }
   }
   video {
-    width: 50%;
-    height: auto;
+    width: 100%;
+    max-width: 100%;
   }
   .videoPlayer__controls {
     opacity: 0;
@@ -18,7 +18,7 @@
     position: absolute;
     z-index: 9;
     bottom: 5px;
-    width: 50%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     display: grid;
