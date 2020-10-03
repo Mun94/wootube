@@ -13,8 +13,9 @@ import userRouter from "./routers/userRouter.js";
 import videoRouter from "./routers/videoRouter.js";
 import routes from "./routes.js";
 import dotenv from "dotenv";
+import connect from "./schemas/index.js";
 dotenv.config();
-
+connect();
 import "./passport.js";
 
 const app = express();
