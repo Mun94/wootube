@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(localsMiddleware);
 app.use("/uploads", express.static("uploads"));
+app.use("/static", express.static("static"));
 app.use(logger("dev"));
 
 app.use(routes.home, globalRouter);
