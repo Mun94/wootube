@@ -20,4 +20,5 @@ module.exports = () => {
 
   require("./video.js");
   require("./comment.js");
+  require("./user.js");
 };
