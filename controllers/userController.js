@@ -1,8 +1,9 @@
 import routes from "../routes.js";
+import passport from "passport";
 import User from "../schemas/user.js";
 
 export const getJoin = (req, res) => res.render("join", { pageTitle: "Join" });
-export const postJoin = async (req, res) => {
+export const postJoin = async (req, res, next) => {
   const {
     body: { name, email, password, password2 },
   } = req;
@@ -16,16 +17,20 @@ export const postJoin = async (req, res) => {
         email,
       });
       await User.register(user, password);
+      next();
     } catch (e) {
       console.log(e);
+      res.redirect(routes.home);
     }
-    res.redirect(routes.home);
   }
 };
 
 export const getLogin = (req, res) =>
   res.render("login", { pageTitle: "Log In" });
-export const postLogin = (req, res) => res.redirect(routes.home);
+export const postLogin = passport.authenticate("local", {
+  failureRedirect: routes.login,
+  successRedirect: routes.home,
+});
 
 export const logout = (req, res) => res.redirect(routes.home);
 
