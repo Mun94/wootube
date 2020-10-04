@@ -1,7 +1,7 @@
 extends layouts/main
 
 block content
-    .form-container__editProfile
+    .form-container
         form.editProfile__form(action=`/users${routes.editProfile}`, method="post", enctype="multipart/form-data")
             .fileUpload
                 label(for="avatar") Avatar
