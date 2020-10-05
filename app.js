@@ -8,12 +8,15 @@ import mongoose from "mongoose";
 import session from "express-session";
 import MongoStore from "connect-mongo";
 import { localsMiddleware } from "./middlewares.js";
-import globalRouter from "./routers/globalRouter.js";
-import userRouter from "./routers/userRouter.js";
-import videoRouter from "./routers/videoRouter.js";
 import routes from "./routes.js";
 import dotenv from "dotenv";
 import connect from "./schemas/index.js";
+
+import globalRouter from "./routers/globalRouter.js";
+import userRouter from "./routers/userRouter.js";
+import videoRouter from "./routers/videoRouter.js";
+import apiRouter from "./routers/apiRouter.js";
+
 dotenv.config();
 connect();
 import "./passport.js";
@@ -44,5 +47,6 @@ app.use(logger("dev"));
 app.use(routes.home, globalRouter);
 app.use(routes.users, userRouter);
 app.use(routes.videos, videoRouter);
+app.use(routes.api, apiRouter);
 
 export default app;
