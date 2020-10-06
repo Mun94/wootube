@@ -24,7 +24,11 @@ import "./passport.js";
 const app = express();
 const CookieStore = MongoStore(session);
 
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+);
 app.set("view engine", "pug");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
