@@ -12,7 +12,7 @@ passport.use(
     {
       clientID: process.env.GH_ID,
       clientSecret: process.env.GH_SECRET,
-      callbackURL: `https://hidden-earth-27978.herokuapp.com/${routes.githubCallback}`,
+      callbackURL: `https://hidden-earth-27978.herokuapp.com${routes.githubCallback}`,
     },
     githubLoginCallback
   )
