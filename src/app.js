@@ -1,3 +1,6 @@
+import "@babel/polyfill";
+import "./passport.js";
+
 import express from "express";
 import logger from "morgan";
 import helmet from "helmet";
@@ -11,6 +14,7 @@ import { localsMiddleware } from "./middlewares.js";
 import routes from "./routes.js";
 import dotenv from "dotenv";
 import connect from "./schemas/index.js";
+import path from "path";
 
 import globalRouter from "./routers/globalRouter.js";
 import userRouter from "./routers/userRouter.js";
@@ -19,7 +23,6 @@ import apiRouter from "./routers/apiRouter.js";
 
 dotenv.config();
 connect();
-import "./passport.js";
 
 const app = express();
 const CookieStore = MongoStore(session);
@@ -33,8 +36,8 @@ app.set("view engine", "pug");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use("/uploads", express.static("uploads"));
-app.use("/static", express.static("static"));
+app.set("views", path.join(__dirname, "views"));
+app.use("/static", express.static(path.join(__dirname, "static")));
 app.use(
   session({
     secret: process.env.JWT_SECRET,
