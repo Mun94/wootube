@@ -15,6 +15,7 @@ import routes from "./routes.js";
 import dotenv from "dotenv";
 import connect from "./schemas/index.js";
 import path from "path";
+import flash from "express-flash";
 
 import globalRouter from "./routers/globalRouter.js";
 import userRouter from "./routers/userRouter.js";
@@ -32,6 +33,7 @@ app.use(
     contentSecurityPolicy: false,
   })
 );
+app.use(flash());
 app.set("view engine", "pug");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
